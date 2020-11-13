@@ -1,0 +1,6 @@
+@echo off
+title Tokki BOT START
+color F4
+mode con cols=85 lines=20
+python run.py
+pause
