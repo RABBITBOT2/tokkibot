@@ -1152,17 +1152,5 @@ async def on_message(message):
         embed.timestamp = datetime.datetime.utcnow()
         await message.channel.send(embed=embed)
 
-    if message.content.startswith(".청소") or message.content.startswith(".cl") or message.content.startswith(".치"):
-        number = int(number)  # Converting the amount of messages to delete to an integer
-        if number >= 100 or number <= 0:
-            embed = discord.Embed(title="1개부터 99개가지만 해주세요.", colour=colour)
-            embed.timestamp = datetime.datetime.utcnow()
-            await message.send(embed=embed)
-        else:
-            await message.channel.purge(limit=number + 1)
-            embed = discord.Embed(title="{}개를 삭제하였습니다.".format(number), colour=colour)
-            embed.timestamp = datetime.datetime.utcnow()
-            await message.send(embed=embed)
-
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
