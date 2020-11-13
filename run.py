@@ -1164,4 +1164,5 @@ async def on_message(message):
             embed.timestamp = datetime.datetime.utcnow()
             await message.send(embed=embed)
 
-client.run('NzYwNzc2NDMwODQ1NTU4Nzk0.X3Q-Qw.-EXInfI0PMpYX0SjNnv_KN5jvrg')
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
